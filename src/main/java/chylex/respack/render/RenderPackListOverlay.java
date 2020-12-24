@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import chylex.respack.ConfigHandler.DisplayPosition;
-import chylex.respack.ResourcePackOrganizer;
+import chylex.respack.ResourcePackOrganizerRevamp;
 import com.google.common.collect.Lists;
 
 public final class RenderPackListOverlay{
@@ -62,14 +62,14 @@ public final class RenderPackListOverlay{
 	@SideOnly(Side.CLIENT)
 	public void onRenderGameOverlay(RenderGameOverlayEvent.Post e){
 		if (e.type == ElementType.TEXT && !packNames.isEmpty()){
-			DisplayPosition position = ResourcePackOrganizer.getConfig().options.getDisplayPosition();
+			DisplayPosition position = ResourcePackOrganizerRevamp.getConfig().options.getDisplayPosition();
 			
 			if ((position == DisplayPosition.TOP_LEFT || position == DisplayPosition.TOP_RIGHT) && Minecraft.getMinecraft().gameSettings.showDebugInfo){
 				return;
 			}
 			
 			final FontRenderer font = Minecraft.getMinecraft().fontRendererObj;
-			final int color = ResourcePackOrganizer.getConfig().options.getDisplayColor();
+			final int color = ResourcePackOrganizerRevamp.getConfig().options.getDisplayColor();
 			
 			final int edgeDist = 3, topOffset = 2;
 			final int ySpacing = font.FONT_HEIGHT;

@@ -6,7 +6,7 @@ import net.minecraftforge.fml.client.IModGuiFactory;
 import net.minecraftforge.fml.client.config.GuiConfig;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import chylex.respack.ResourcePackOrganizer;
+import chylex.respack.ResourcePackOrganizerRevamp;
 
 public final class GuiModConfig implements IModGuiFactory{
 	@Override
@@ -30,7 +30,7 @@ public final class GuiModConfig implements IModGuiFactory{
 	@SideOnly(Side.CLIENT)
 	public static final class GuiModConfigInner extends GuiConfig{
 		public GuiModConfigInner(GuiScreen parent){
-			super(parent,ResourcePackOrganizer.getConfig().getGuiConfigElements(),ResourcePackOrganizer.MODID,false,false,ResourcePackOrganizer.getConfig().getGuiConfigString());
+			super(parent, ResourcePackOrganizerRevamp.getConfig().getGuiConfigElements(), ResourcePackOrganizerRevamp.MODID,false,false, ResourcePackOrganizerRevamp.getConfig().getGuiConfigString());
 		}
 	}
 }
