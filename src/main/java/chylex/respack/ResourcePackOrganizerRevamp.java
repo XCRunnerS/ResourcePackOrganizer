@@ -3,7 +3,6 @@ package chylex.respack;
 import chylex.respack.ConfigHandler.DisplayPosition;
 import chylex.respack.gui.GuiCustomResourcePacks;
 import chylex.respack.render.RenderPackListOverlay;
-import chylex.respack.repository.ResourcePackRepositoryCustom;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreenResourcePacks;
 import net.minecraftforge.client.event.GuiOpenEvent;
@@ -46,7 +45,6 @@ public final class ResourcePackOrganizerRevamp {
 
         MinecraftForge.EVENT_BUS.register(this);
 
-        ResourcePackRepositoryCustom.overrideRepository(config.options.getEnabledPacks());
         RenderPackListOverlay.refreshPackNames();
     }
 
