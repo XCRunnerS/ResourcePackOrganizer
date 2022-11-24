@@ -1,5 +1,12 @@
 # Resource Pack Organizer
 
+## Known Issues
+
+Issue | Priority | Difficulty
+-|- | -
+Selected Packs n folders dont save on reload | medium | hard (recode pack saving)
+Cannot open MC Pack Dir | High | Low (should be a typo fix, if you use macos or linux let me know if the issue exists there as well!)
+
 ## Project license
 
 The source code and binaries are released under [MPL 2.0](https://github.com/chylex/Resource-Pack-Organizer/blob/master/LICENSE).
